@@ -73,7 +73,7 @@ def calculate_volatility(price_dict_, span_, DATA_DIR):
 
             # print(len(following_nday_data))
             if following_nday_price and today_data:
-                log_diff = float(np.log(following_nday_price/today_data))#calculate stocks' volatility
+                log_diff = float(np.log(following_nday_price-today_data/today_data))#calculate stocks' volatility
                 volatility = np.std(log_diff)
                 persent = volatility*100 # movement persentage
                 if 104.28465722801789  > persent > min_per: #min_per=-100
