@@ -81,10 +81,6 @@ def calculate_volatility(price_dict_, span_, DATA_DIR):
                 # print(str(persent)+"%")
                 if volatility == 80.39968485780167:
                     print(date_,str(company))
-                if volatility > 0:
-                    volatility = 1.0
-                else:
-                    volatility = 0.0
             else:
                 print("Date Error, following_nday_price or today_data is null")
                 continue
